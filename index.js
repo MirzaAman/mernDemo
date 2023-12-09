@@ -10,7 +10,7 @@ app.use(cors());
 
 mongoose.connect("mongodb+srv://mzawyd:9544886696ska@demo.rxfmxhv.mongodb.net/mirchu?retryWrites=true&w=majority")
 
-app.get('/getUsers',(req,res)=>{
+app.get('/getUsers',async(req,res)=>{
     userModel.find({}).then((err,result)=>{
         if(err){
             res.json(err)
